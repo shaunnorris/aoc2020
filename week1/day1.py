@@ -1,10 +1,11 @@
-small_test_data = [1721,
-                   979,
-                   366,
-                   299,
-                   675,
-                   1456,
-                   ]
+small_test_data = [
+    1721,
+    979,
+    366,
+    299,
+    675,
+    1456,
+]
 
 
 def test_find_add_pair_product():
@@ -24,7 +25,7 @@ def find_add_pair_product(list, target):
 
 def test_find_add_triple_product():
     assert find_add_triple_product(small_test_data, 2020) == 241861950
-    
+
 
 def find_add_triple_product(list, target):
     checked = {}
@@ -35,8 +36,8 @@ def find_add_triple_product(list, target):
 
 
 def test_load_input_file():
-    assert len(load_input_file_to_list('day1_test_input.txt')) == 6
-    assert load_input_file_to_list('day1_test_input.txt') == small_test_data
+    assert len(load_input_file_to_list("day1_test_input.txt")) == 6
+    assert load_input_file_to_list("day1_test_input.txt") == small_test_data
 
 
 def load_input_file_to_list(target):
@@ -46,10 +47,11 @@ def load_input_file_to_list(target):
         integer_list = list(integer_map)
     return integer_list
 
-part1_list = load_input_file_to_list('day1input.txt')
+
+part1_list = load_input_file_to_list("day1input.txt")
 part1_solution = find_add_pair_product(part1_list, 2020)
-print('part1:',part1_solution)
+print("part1:", part1_solution)
 
 part2_list = part1_list
 part2_solution = find_add_triple_product(part2_list, 2020)
-print('part2:',part2_solution)
+print("part2:", part2_solution)
